@@ -1,6 +1,7 @@
 "use client";
+
 import { useRouter } from "next/navigation";
-import { SignOutButton, useAuth } from "@clerk/nextjs";
+import { useAuth } from "@clerk/nextjs";
 
 export default function DashboardPage() {
   const { isSignedIn } = useAuth();
@@ -13,9 +14,8 @@ export default function DashboardPage() {
 
   return (
     <div>
-      <SignOutButton>
-        <button>Đăng xuất</button>
-      </SignOutButton>
+      <h1>Welcome to your Dashboard</h1>
+      <p>This is protected content.</p>
     </div>
   );
 }
